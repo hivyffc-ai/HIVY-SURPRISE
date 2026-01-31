@@ -17,93 +17,93 @@ import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form'
 import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig, getVisiblePackages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
 
-// Experience features
+// Experience features - Surprise Date Focused
 const experienceFeatures = [
   {
     icon: Clock,
-    title: "3-Hour Private Booking",
-    description: "Enjoy three exclusive hours at our private rooftop venue for your candlelight dinner or celebration"
+    title: "3-Hour Private Date",
+    description: "Enjoy three exclusive hours at our private rooftop venue for your romantic surprise date experience"
   },
   {
     icon: Gift,
-    title: "Celebration Cake Included",
-    description: "Complimentary birthday/anniversary cake & non-alcoholic champagne with every package"
+    title: "Surprise Date Essentials",
+    description: "Complimentary celebration cake & non-alcoholic champagne with every surprise date package"
   },
   {
     icon: Camera,
     title: "Instagram-Worthy Setup",
-    description: "Professional balloon decorations, fairy lights & romantic photo-ready ambiance"
+    description: "Stunning decorations, fairy lights & romantic photo-ready ambiance for your surprise date"
   },
   {
     icon: Music,
     title: "Romantic Ambiance",
-    description: "Soft romantic music, candlelight setting & complete privacy for couples"
+    description: "Soft romantic music, candlelight setting & complete privacy for your surprise date"
   }
 ];
 
-// FAQ items
+// FAQ items - Surprise Date Focused
 const faqs = [
   {
-    question: "What is HIVY and where is it located in Surat?",
-    answer: "HIVY is Surat's premier couples-only private celebration venue—the best spot for candlelight dinners, romantic rooftop dining, birthday surprises, and anniversary celebrations in Surat, Gujarat."
+    question: "What is HIVY Surprise Date and where is it located in Surat?",
+    answer: "HIVY Surprise Date is Surat's premier romantic surprise date venue—the perfect spot for planning magical surprise dates for your boyfriend, girlfriend, husband, or wife. Located in Adajan, Surat, Gujarat."
   },
   {
-    question: "How do I book a candlelight dinner or birthday surprise at HIVY?",
-    answer: `Simply WhatsApp ${siteConfig.phone} or call directly. Share your occasion (candlelight dinner, birthday surprise, anniversary celebration, proposal), preferred date, and number of guests. We'll confirm your booking instantly with a custom quote for your romantic celebration.`
+    question: "How do I book a surprise date at HIVY?",
+    answer: `Simply WhatsApp ${siteConfig.phone} or call directly. Share your surprise date idea (for boyfriend, girlfriend, husband, wife), preferred date, and any special requests. We'll confirm your booking instantly and help plan the perfect romantic surprise.`
   },
   {
-    question: "What are the prices for candlelight dinner packages in Surat?",
-    answer: "Our romantic celebration packages start from affordable rates and include premium rooftop setup, welcome drinks, decorations, and gourmet dining. Contact us for current pricing on candlelight dinner packages, birthday surprise setups, and anniversary celebration deals."
+    question: "What are the prices for surprise date packages in Surat?",
+    answer: "Our romantic surprise date packages start from ₹5,100 and include premium rooftop setup, welcome drinks, decorations, gourmet dining, and romantic ambiance. Contact us for current pricing on all surprise date setups."
   },
   {
-    question: "Can I book HIVY for a marriage proposal or engagement?",
-    answer: "Absolutely! HIVY is Surat's most popular proposal venue. Our romantic proposal setups feature heart arches, fairy lights, rose petals, and champagne—perfect for creating an unforgettable 'yes' moment. We've hosted 3000+ successful proposals and engagements."
+    question: "Can I customize my surprise date setup?",
+    answer: "Absolutely! Every surprise date at HIVY is fully customizable. Choose from themed decorations, personalized messages in rose petals, specific flower arrangements, music playlist, and special food preferences. We make your vision come true."
   },
   {
-    question: "What occasions can I celebrate at HIVY Surat?",
-    answer: "We specialize in candlelight dinners, birthday surprises (for boyfriend, girlfriend, husband, wife), anniversary celebrations (1st, 10th, 25th), marriage proposals, engagement parties, Valentine's Day dinners, pre-wedding shoots, pregnancy announcements, and romantic date nights."
+    question: "What types of surprise dates can I plan at HIVY?",
+    answer: "We specialize in surprise dates for boyfriends, girlfriends, husbands, and wives. Popular options include rooftop dates, midnight surprise dates, sunset dates, first dates, monthly anniversary dates, makeup dates, and 'just because' dates."
   },
   {
-    question: "What are the time slots available for candlelight dinner booking?",
-    answer: "Our romantic celebration time slots are from 6 PM to 11 PM. Weekend slots for candlelight dinners and birthday surprises book fast—we recommend advance booking to secure your preferred date at Surat's best romantic restaurant."
+    question: "What are the time slots available for surprise date booking?",
+    answer: "Our surprise date time slots are: Lunch (12-3 PM), Evening (4-7 PM), Dinner (7-10 PM), and Late Night (10 PM-1 AM). Weekend slots for romantic surprise dates book fast—we recommend advance booking."
   },
   {
-    question: "Can I customize the decorations for my birthday surprise or anniversary?",
-    answer: "Yes! All our celebration packages are fully customizable. Choose from balloon decorations, flower arrangements, themed backdrops, personalized messages, cakes, and more for your birthday room decoration, anniversary setup, or proposal arrangement."
+    question: "Is HIVY a private venue for surprise dates?",
+    answer: "Yes, HIVY is 100% private and exclusively for couples. During your surprise date, you'll have complete privacy—no other guests. It's the most intimate and romantic surprise date venue in Surat with a 4.9★ rating."
   },
   {
-    question: "Is HIVY a private venue for couples only?",
-    answer: "Yes, HIVY is 100% private and exclusively for couples. You'll have complete privacy during your booking slot—no other guests. It's the safest, most romantic, and couple-friendly celebration venue in Surat with a 4.9★ rating."
+    question: "What's included in a surprise date package?",
+    answer: "Every surprise date package includes: 3 hours of private venue access, romantic decorations (rose petals, candles, fairy lights), welcome drink, multi-course gourmet meal, celebration cake, romantic music, and personalized touches."
   },
   {
-    question: "What areas in Surat does HIVY serve for romantic celebrations?",
-    answer: "We welcome couples from all Surat areas including Vesu, Adajan, Athwa, Piplod, City Light, Althan, Varachha, Pal, Dumas Road, and more. HIVY is centrally located as the best candlelight dinner restaurant serving all of Surat."
+    question: "What areas in Surat does HIVY serve for surprise dates?",
+    answer: "We welcome couples from all Surat areas including Vesu, Adajan, Athwa, Piplod, City Light, Althan, Varachha, Pal, Dumas Road, and more. HIVY is centrally located as Surat's best surprise date destination."
   },
   {
     question: "What is the cancellation and rescheduling policy?",
-    answer: "Rescheduling must be informed at least one day prior. Your candlelight dinner or birthday surprise booking can be rescheduled within one month, subject to availability. Please note: No Refund Policy Applicable."
+    answer: "Rescheduling must be informed at least one day prior. Your surprise date booking can be rescheduled within one month, subject to availability. Please note: No Refund Policy Applicable."
   }
 ];
 
-// Gallery items data - Optimized for faster loading (reduced to 16 items)
+// Gallery items data - Surprise Date Focused (using existing images)
 const galleryItems = [
-  // Featured Images from packages
-  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
-  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
-  { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
-  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
-  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
+  // Featured Images from packages - Surprise Date themed
+  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Romantic Surprise Date Setup Surat', title: 'Swing of LOVE', subtitle: 'Surprise Date Package', featured: true },
+  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'Intimate Surprise Date Surat', title: 'BoHo Chic Date', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Magical Surprise Date Setup Surat', title: 'Fairy Tale Date', featured: false },
+  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic surprise date video Surat', title: 'Surprise Date Moments', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Surprise Date Tent Setup Surat', title: 'Tent of Romance', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Couple surprise date setup Surat', title: 'Romantic Swing', featured: false },
+  { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Surprise date experience video Surat', title: 'Date Experience', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Private surprise date Surat', title: 'Boho Ambiance', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Dreamy surprise date decoration Surat', title: 'Magical Setup', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Candlelit surprise date Surat', title: 'Romantic Décor', featured: false },
+  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop surprise date reel Surat', title: 'Rooftop Date', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Luxury surprise date setup Surat', title: 'Love Swing', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night surprise date setup Surat', title: 'Night Setup', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening surprise date Surat', title: 'Evening Magic', featured: false },
+  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Surprise date reel Surat', title: 'Date Reel', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Private date setup Surat', title: 'Private Setup', featured: false },
 ];
 
 // Gallery Section Component

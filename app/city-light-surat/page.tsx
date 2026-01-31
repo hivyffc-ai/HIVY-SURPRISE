@@ -7,7 +7,7 @@ const area = getAreaBySlug("city-light-surat")!;
 export const metadata: Metadata = {
   title: area.metaTitle,
   description: area.metaDescription,
-  keywords: [area.name, "celebration venue", "romantic dining", "Surat", "HIVY"],
+  keywords: [area.name, "surprise date", "romantic date", "date night", "Surat", "HIVY Surprise Date"],
   alternates: { canonical: `https://hivy.co.in/${area.slug}` },
   openGraph: {
     title: area.metaTitle,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: `https://hivy.co.in/${area.slug}`,
     type: "website",
     locale: "en_IN",
-    siteName: "HIVY - Place for Celebrations",
+    siteName: "HIVY Surprise Date",
   },
 };
 

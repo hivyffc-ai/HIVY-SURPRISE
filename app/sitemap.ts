@@ -1,15 +1,15 @@
 /**
- * HIVY - PLACE FOR CELEBRATIONS - SEO OPTIMIZED SITEMAP
+ * HIVY SURPRISE DATE - 100% SURPRISE DATE FOCUSED SITEMAP
  * Domain: hivy.co.in
  * 
- * Total Pages: Comprehensive sitemap including:
+ * Total Pages: Optimized surprise date sitemap including:
  * - 1 Homepage (priority 1.0)
  * - 9 Static pages (priority 0.7-0.9)
- * - 8 Service category pages (priority 0.9)
+ * - 1 Service category (Surprise Date - priority 0.9)
  * - 6 Package detail pages (priority 0.85)
- * - 113 Service keyword pages (priority 0.8)
+ * - 34 Surprise Date keyword pages (priority 0.8)
  * - 40 Surat area pages (priority 0.7)
- * - 25 Blog posts (priority 0.6)
+ * - Blog posts (priority 0.6)
  * 
  * Last Updated: January 2026
  */
