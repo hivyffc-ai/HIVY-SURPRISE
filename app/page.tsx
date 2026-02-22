@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/ffc-config";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${siteConfig.name} | Best Surprise Date Setup & Romantic Date Experiences in Surat`,
-    description: `${siteConfig.tagline}. Surat's #1 surprise date venue for couples. Book romantic surprise dates for boyfriend, girlfriend, husband, or wife. Private rooftop setups, candlelit ambiance, and unforgettable experiences. 4.9★ rating.`,
+    description: `${siteConfig.tagline}. Surat's #1 surprise date venue for couples. Book romantic surprise dates for boyfriend, girlfriend, husband, or wife. Private setups, candlelit ambiance, and unforgettable experiences. 4.9★ rating.`,
     keywords: [
       'surprise date surat',
       'surprise date for boyfriend surat',
@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'couple date surat',
       'romantic date surat',
       'private date setup surat',
-      'rooftop date surat',
+      'private date surat',
       'intimate date experience surat',
       'luxury date surat',
       'creative date ideas surat',

@@ -63,12 +63,12 @@ export async function generateMetadata({
       ...service.keywords.slice(0, 5).map(k => k.slug.replace(/-/g, ' '))
     ],
     alternates: {
-      canonical: `https://hivy.co.in/services/${service.slug}`,
+      canonical: `https://surprisedatesurat.com/services/${service.slug}`,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `https://hivy.co.in/services/${service.slug}`,
+      url: `https://surprisedatesurat.com/services/${service.slug}`,
       type: "website",
       locale: "en_IN",
       siteName: siteConfig.name,
@@ -160,7 +160,7 @@ export default async function ServiceCategoryPage({
         "Delicious multi-course menu",
         "Soft romantic music",
         "Beautiful table settings",
-        "Indoor & rooftop options"
+        "Indoor & private options"
       ],
       perfectFor: ["Date Night", "Romantic Dinner", "Special Occasions", "Valentine's Day", "Just Because Moments"]
     },
@@ -238,7 +238,7 @@ export default async function ServiceCategoryPage({
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-600 to-yellow-900 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-rose-700 via-pink-700 to-rose-800 text-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30 text-lg px-4 py-2">
@@ -252,7 +252,7 @@ export default async function ServiceCategoryPage({
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/packages">
-                <Button size="lg" className="bg-white text-yellow-800 hover:bg-yellow-50 font-semibold">
+                <Button size="lg" className="bg-white text-rose-700 hover:bg-rose-50 font-semibold">
                   View Our Packages <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
@@ -280,7 +280,7 @@ export default async function ServiceCategoryPage({
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {content.benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-4 p-4 bg-amber-50 rounded-xl">
-                <div className="w-10 h-10 bg-yellow-800 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-rose-700 rounded-full flex items-center justify-center flex-shrink-0">
                   <Check className="h-5 w-5 text-white" />
                 </div>
                 <p className="text-gray-700 font-medium">{benefit}</p>
@@ -294,7 +294,7 @@ export default async function ServiceCategoryPage({
       <section className="py-16 bg-stone-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-yellow-800 text-white">
+            <Badge className="mb-4 bg-rose-700 text-white">
               <Sparkles className="h-4 w-4 mr-2" /> Recommended Setups
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4">
@@ -317,19 +317,19 @@ export default async function ServiceCategoryPage({
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-yellow-800 text-white font-bold">
+                      <Badge className="bg-rose-700 text-white font-bold">
                         ₹{pkg.price.toLocaleString('en-IN')}
                       </Badge>
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-800 transition-colors">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-rose-700 transition-colors">
                       {pkg.emoji} {pkg.name}
                     </h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                       {pkg.shortDescription}
                     </p>
-                    <div className="flex items-center text-yellow-800 font-medium">
+                    <div className="flex items-center text-rose-700 font-medium">
                       View Details <ChevronRight className="h-4 w-4 ml-1" />
                     </div>
                   </CardContent>
@@ -340,7 +340,7 @@ export default async function ServiceCategoryPage({
           
           <div className="text-center mt-10">
             <Link href="/packages">
-              <Button size="lg" className="bg-yellow-800 hover:bg-yellow-900 text-white">
+              <Button size="lg" className="bg-rose-700 hover:bg-rose-800 text-white">
                 View All 6 Packages <ChevronRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
@@ -363,10 +363,10 @@ export default async function ServiceCategoryPage({
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {service.keywords.map((keyword) => (
               <Link key={keyword.slug} href={`/${keyword.slug}`}>
-                <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 hover:border-yellow-800 border-2 border-transparent">
+                <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 hover:border-rose-700 border-2 border-transparent">
                   <CardContent className="p-4 text-center">
                     <span className="text-3xl mb-2 block">{service.emoji}</span>
-                    <h3 className="font-semibold text-sm text-gray-800 hover:text-yellow-800 transition-colors">
+                    <h3 className="font-semibold text-sm text-gray-800 hover:text-rose-700 transition-colors">
                       {keyword.title}
                     </h3>
                   </CardContent>
@@ -413,17 +413,17 @@ export default async function ServiceCategoryPage({
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <MapPin className="h-6 w-6 text-yellow-800 flex-shrink-0 mt-1" />
+                    <MapPin className="h-6 w-6 text-rose-700 flex-shrink-0 mt-1" />
                     <p className="text-gray-700">{siteConfig.address}</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Phone className="h-6 w-6 text-yellow-800" />
-                    <a href={`tel:${siteConfig.phone}`} className="text-gray-700 hover:text-yellow-800 font-medium">
+                    <Phone className="h-6 w-6 text-rose-700" />
+                    <a href={`tel:${siteConfig.phone}`} className="text-gray-700 hover:text-rose-700 font-medium">
                       {siteConfig.phone}
                     </a>
                   </div>
                   <div className="flex items-center gap-4">
-                    <Clock className="h-6 w-6 text-yellow-800" />
+                    <Clock className="h-6 w-6 text-rose-700" />
                     <p className="text-gray-700">Open Daily: 11:00 AM - 11:00 PM</p>
                   </div>
                 </div>
@@ -435,7 +435,7 @@ export default async function ServiceCategoryPage({
                 </p>
                 <div className="space-y-4">
                   <Link href="/packages" className="block">
-                    <Button className="w-full bg-yellow-800 hover:bg-yellow-900 text-white" size="lg">
+                    <Button className="w-full bg-rose-700 hover:bg-rose-800 text-white" size="lg">
                       Browse Packages
                     </Button>
                   </Link>

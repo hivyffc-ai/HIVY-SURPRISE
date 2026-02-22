@@ -8,12 +8,12 @@ const keyword = service.keywords.find(k => k.slug === "stargazing-date-surat")!;
 export const metadata: Metadata = {
   title: keyword.metaTitle,
   description: keyword.metaDescription,
-  keywords: [keyword.title, "stargazing date", "under the stars", "night sky date", "Surat", "HIVY Surprise Date"],
-  alternates: { canonical: `https://hivy.co.in/${keyword.slug}` },
+  keywords: [keyword.title, "stargazing date", "in a romantic setting", "night sky date", "Surat", "HIVY Surprise Date"],
+  alternates: { canonical: `https://surprisedatesurat.com/${keyword.slug}` },
   openGraph: {
     title: keyword.metaTitle,
     description: keyword.metaDescription,
-    url: `https://hivy.co.in/${keyword.slug}`,
+    url: `https://surprisedatesurat.com/${keyword.slug}`,
     type: "website",
     locale: "en_IN",
     siteName: "HIVY Surprise Date",

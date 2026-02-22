@@ -19,8 +19,8 @@ export interface GalleryItem {
 // SEO-friendly gallery items with keyword-rich names
 export const galleryItems: GalleryItem[] = [
   // Featured Images
-  { type: 'image', src: '/images/gallery/rooftop-romantic-setup-surat-1.jpg', alt: 'Romantic rooftop setup in Surat', title: 'Romantic Rooftop', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/images/gallery/romantic-rooftop-candlelight-dinner-surat-1.jpg', alt: 'Candlelight dinner in Surat', title: 'Candlelight Dinner', featured: false },
+  { type: 'image', src: '/images/gallery/private-romantic-setup-surat-1.jpg', alt: 'Romantic private setup in Surat', title: 'Romantic Private', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/images/gallery/romantic-private-candlelight-dinner-surat-1.jpg', alt: 'Candlelight dinner in Surat', title: 'Candlelight Dinner', featured: false },
   { type: 'image', src: '/images/gallery/candlelight-dinner-setup-surat-1.jpg', alt: 'Romantic dinner setup Surat', title: 'Evening Romance', featured: false },
   { type: 'video', src: '/videos/birthday-celebration-video-surat-1.mp4', alt: 'Birthday celebration video Surat', title: 'Birthday Celebration', featured: false },
   { type: 'image', src: '/images/gallery/birthday-surprise-decoration-surat-1.jpg', alt: 'Birthday surprise decoration Surat', title: 'Birthday Surprise', featured: false },
@@ -29,7 +29,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/images/gallery/romantic-table-decoration-surat-1.jpg', alt: 'Romantic table decoration Surat', title: 'Table Decor', featured: false },
   { type: 'image', src: '/images/gallery/birthday-balloon-decoration-surat-1.jpg', alt: 'Birthday balloon decoration Surat', title: 'Balloon Decoration', featured: false },
   { type: 'image', src: '/images/gallery/anniversary-dinner-setup-surat-1.jpg', alt: 'Anniversary dinner setup Surat', title: 'Anniversary Dinner', featured: false },
-  { type: 'video', src: '/videos/rooftop-celebration-reel-surat-1.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
+  { type: 'video', src: '/videos/private-celebration-reel-surat-1.mp4', alt: 'Private celebration reel Surat', title: 'Private Vibes', featured: false },
   { type: 'image', src: '/images/gallery/romantic-ambiance-cafe-surat-1.jpg', alt: 'Romantic ambiance cafe Surat', title: 'Romantic Ambiance', featured: false },
   { type: 'image', src: '/images/gallery/couple-celebration-surat-1.jpg', alt: 'Couple celebration Surat', title: 'Couple Moment', featured: false },
   { type: 'image', src: '/images/gallery/evening-romantic-celebration-surat-1.jpg', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
@@ -64,7 +64,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/images/gallery/baby-moments-celebration-surat-1.jpg', alt: 'Baby moments celebration Surat', title: 'Baby Moments', featured: false },
   { type: 'image', src: '/images/gallery/candlelight-dinner-for-couples-surat-1.jpg', alt: 'Candlelight dinner for couples Surat', title: 'Couple Dinner', featured: false },
   { type: 'video', src: '/videos/couple-celebration-video-surat-1.mp4', alt: 'Couple celebration video Surat', title: 'Celebration Video', featured: false },
-  { type: 'image', src: '/images/gallery/rooftop-dinner-surat-1.jpg', alt: 'Rooftop dinner Surat', title: 'Rooftop Dinner', featured: false },
+  { type: 'image', src: '/images/gallery/private-dinner-surat-1.jpg', alt: 'Private dinner Surat', title: 'Private Dinner', featured: false },
   { type: 'image', src: '/images/gallery/private-dining-surat-1.jpg', alt: 'Private dining Surat', title: 'Private Dining', featured: false },
   { type: 'image', src: '/images/gallery/romantic-venue-surat-1.jpg', alt: 'Romantic venue Surat', title: 'Romantic Venue', featured: false },
   { type: 'image', src: '/images/gallery/celebration-venue-surat-1.jpg', alt: 'Celebration venue Surat', title: 'Celebration Venue', featured: false },
@@ -103,7 +103,7 @@ export function FFCGallery({
     <section className={`py-12 md:py-16 bg-gradient-to-br from-stone-100 via-white to-stone-50 ${className}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+          <Badge className="mb-4 bg-stone-200 text-rose-800 border-stone-300">
             <ImageIcon className="h-4 w-4 mr-2" /> {title}
           </Badge>
           <h2 className="text-2xl md:text-3xl font-bold mb-2 font-serif">
@@ -121,8 +121,8 @@ export function FFCGallery({
               variant={activeFilter === 'all' ? 'default' : 'outline'} 
               onClick={() => setActiveFilter('all')}
               className={activeFilter === 'all' 
-                ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-                : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+                ? 'bg-stone-1000 hover:bg-rose-700 text-white' 
+                : 'border-rose-200 text-rose-800 hover:bg-stone-100'}
             >
               All ({photoCount + videoCount})
             </Button>
@@ -130,8 +130,8 @@ export function FFCGallery({
               variant={activeFilter === 'photos' ? 'default' : 'outline'} 
               onClick={() => setActiveFilter('photos')}
               className={activeFilter === 'photos' 
-                ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-                : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+                ? 'bg-stone-1000 hover:bg-rose-700 text-white' 
+                : 'border-rose-200 text-rose-800 hover:bg-stone-100'}
             >
               <ImageIcon className="h-4 w-4 mr-2" />
               Photos ({photoCount})
@@ -140,8 +140,8 @@ export function FFCGallery({
               variant={activeFilter === 'videos' ? 'default' : 'outline'} 
               onClick={() => setActiveFilter('videos')}
               className={activeFilter === 'videos' 
-                ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-                : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+                ? 'bg-stone-1000 hover:bg-rose-700 text-white' 
+                : 'border-rose-200 text-rose-800 hover:bg-stone-100'}
             >
               <Play className="h-4 w-4 mr-2" />
               Videos ({videoCount})
@@ -187,7 +187,7 @@ export function FFCGallery({
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="h-4 w-4 md:h-5 md:w-5 text-yellow-800 ml-1" fill="currentColor" />
+                      <Play className="h-4 w-4 md:h-5 md:w-5 text-rose-700 ml-1" fill="currentColor" />
                     </div>
                   </div>
                   <div className="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-opacity">

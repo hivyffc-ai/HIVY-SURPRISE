@@ -20,19 +20,81 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
   // Get nearby areas (excluding current)
   const nearbyAreas = suratAreas.filter(a => a.slug !== area.slug).slice(0, 8);
 
+  // Area FAQ data for schema
+  const areaFaqs = [
+    {
+      question: `How do couples from ${area.name} reach HIVY Surprise Date?`,
+      answer: `HIVY Surprise Date is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions.`
+    },
+    {
+      question: "What surprise date experiences do you offer?",
+      answer: "We offer private surprise dates, private cabin dates, outdoor date setups, sunset dates, midnight surprise dates, and customized romantic experiences tailored to your preferences."
+    },
+    {
+      question: "What are the booking options available?",
+      answer: `Couples from ${area.name} can book via WhatsApp, phone call, or our online form. We recommend booking 2-3 days in advance for your preferred slot.`
+    },
+    {
+      question: "Is the venue private?",
+      answer: "Yes! Your surprise date is 100% private. No other guests will be present during your booking slot, ensuring complete intimacy."
+    },
+    {
+      question: `What is included in a surprise date package for ${area.name} couples?`,
+      answer: "Our surprise date packages include 3 hours of private venue access, romantic decorations with fairy lights and flowers, welcome drinks, gourmet dinner, celebration cake, soft romantic music, and a dedicated host to ensure your surprise goes perfectly."
+    },
+    {
+      question: `What are the prices for surprise date packages near ${area.name}?`,
+      answer: "Our surprise date packages start from ₹5,100 and go up to ₹6,500. Each package includes venue access, decorations, food, music, cake, and dedicated service with no hidden costs."
+    },
+    {
+      question: "What time slots are available for surprise dates?",
+      answer: "We offer flexible 3-hour time slots throughout the day: Lunch (12-3 PM), Afternoon (1-4 PM, 2-5 PM), Evening (4-7 PM, 5-8 PM, 6-9 PM), and Dinner (7-10 PM, 7:30-10:30 PM, 8-11 PM)."
+    },
+    {
+      question: `Can I plan a surprise for my partner without them knowing?`,
+      answer: "Absolutely! We specialize in secret surprise planning. Share your plan with our team via WhatsApp, coordinate the timing, and we'll handle all the setup before you arrive. Your partner will have no idea until the big reveal!"
+    },
+    {
+      question: "Can I customize the surprise date decorations?",
+      answer: "Yes! All our setups are fully customizable. Choose specific color themes, add personalized messages, request special flowers, or include photos. Just share your vision and we'll make it happen."
+    },
+    {
+      question: "Is parking available at the venue?",
+      answer: `Yes, free parking is available at our venue for both two-wheelers and four-wheelers. Couples from ${area.name} can drive directly to us without any parking worries.`
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": areaFaqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
       <div className="bg-stone-100 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-rose-700">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/areas" className="text-gray-500 hover:text-yellow-800">Areas</Link>
+            <Link href="/areas" className="text-gray-500 hover:text-rose-700">Areas</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-yellow-800 font-medium">{area.name}</span>
+            <span className="text-rose-700 font-medium">{area.name}</span>
           </nav>
         </div>
       </div>
@@ -78,16 +140,18 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 mx-auto mb-2" />
-                  <span className="text-2xl font-serif">{area.name}</span>
-                </div>
-              </div>
+            {/* Hero Booking Form */}
+            <div className="hidden lg:block">
+              <FFCBookingForm variant="hero" pageTitle={`${area.name} Area Page`} />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mobile Booking Form */}
+      <section className="lg:hidden bg-rose-50 py-8">
+        <div className="container mx-auto px-4">
+          <FFCBookingForm pageTitle={`${area.name} Area Page`} />
         </div>
       </section>
 
@@ -139,7 +203,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </p>
 
                 <p className="text-gray-600 mb-6">
-                  Whether you're planning a surprise date for your boyfriend, girlfriend, husband, or wife, our venue offers stunning rooftop setups and elegant private cabins that provide the perfect ambiance for your special surprise date experience.
+                  Whether you're planning a surprise date for your boyfriend, girlfriend, husband, or wife, our venue offers stunning private setups and elegant private cabins that provide the perfect ambiance for your special surprise date experience.
                 </p>
 
                 <div className="bg-white rounded-xl p-6 mb-8">
@@ -149,7 +213,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
                     {[
-                      "Rooftop Surprise Date Setup",
+                      "Private Surprise Date Setup",
                       "Private Cabin Date Night",
                       "Outdoor Date Experience",
                       "Sunset Date Setup",
@@ -181,7 +245,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-rose-700 font-bold">•</span>
-                    <span><strong>6 Unique Setups:</strong> Choose from rooftop and private cabin experiences.</span>
+                    <span><strong>6 Unique Setups:</strong> Choose from private and private cabin experiences.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-rose-700 font-bold">•</span>
@@ -299,24 +363,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                question: `How do couples from ${area.name} reach HIVY Surprise Date?`,
-                answer: `HIVY Surprise Date is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions.`
-              },
-              {
-                question: "What surprise date experiences do you offer?",
-                answer: "We offer rooftop surprise dates, private cabin dates, outdoor date setups, sunset dates, midnight surprise dates, and customized romantic experiences tailored to your preferences."
-              },
-              {
-                question: "What are the booking options available?",
-                answer: `Couples from ${area.name} can book via WhatsApp, phone call, or our online form. We recommend booking 2-3 days in advance for your preferred slot.`
-              },
-              {
-                question: "Is the venue private?",
-                answer: "Yes! Your surprise date is 100% private. No other guests will be present during your booking slot, ensuring complete intimacy."
-              }
-            ].map((faq, index) => (
+            {areaFaqs.map((faq, index) => (
               <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-rose-200 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}

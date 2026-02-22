@@ -1,6 +1,6 @@
 /**
- * HIVY - PLACE FOR CELEBRATIONS - SEO OPTIMIZED ROBOTS.TXT
- * Domain: hivy.co.in
+ * HIVY SURPRISE DATE - SEO OPTIMIZED ROBOTS.TXT
+ * Domain: surprisedatesurat.com
  * 
  * Configuration for search engine crawlers:
  * - Allow all public pages including service keywords & area pages
@@ -21,7 +21,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://hivy.co.in";
+  const baseUrl = "https://surprisedatesurat.com";
   
   return {
     rules: [

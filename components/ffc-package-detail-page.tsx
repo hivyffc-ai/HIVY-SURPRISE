@@ -59,11 +59,11 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
       <div className="bg-stone-100 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-rose-700">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/packages" className="text-gray-500 hover:text-yellow-800">Packages</Link>
+            <Link href="/packages" className="text-gray-500 hover:text-rose-700">Packages</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-yellow-800 font-medium">{pkg.name}</span>
+            <span className="text-rose-700 font-medium">{pkg.name}</span>
           </nav>
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
             {/* Right Column - Details */}
             <div className="mt-4 lg:mt-0">
               {/* Title & Tagline */}
-              <Badge className="mb-3 md:mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+              <Badge className="mb-3 md:mb-4 bg-stone-200 text-rose-800 border-stone-300">
                 <Heart className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" /> Couples Only Experience
               </Badge>
               
@@ -178,13 +178,13 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               {/* Tagline */}
               <div className="bg-stone-100 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
                 <p className="text-stone-900 italic text-sm md:text-base">
-                  💍 {pkg.name} — where every occasion turns into a forever memory under the stars ✨🌙
+                  💍 {pkg.name} — where every occasion turns into a forever memory in a romantic setting ✨🌙
                 </p>
               </div>
 
               {/* Price */}
               <div className="mb-4 md:mb-6">
-                <span className="text-2xl md:text-3xl font-bold text-yellow-800">{formatPrice(pkg.price)}</span>
+                <span className="text-2xl md:text-3xl font-bold text-rose-700">{formatPrice(pkg.price)}</span>
               </div>
 
               {/* Booking Form Inline */}
@@ -208,7 +208,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               {pkg.features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3 bg-white rounded-lg p-3 md:p-4">
                   <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                    <Check className="h-4 w-4 md:h-5 md:w-5 text-yellow-800" />
+                    <Check className="h-4 w-4 md:h-5 md:w-5 text-rose-700" />
                   </div>
                   <div>
                     <p className="text-gray-700 text-sm md:text-base">{feature}</p>
@@ -269,7 +269,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
                   </>
                 ) : (
                   <>
-                    <p className="text-yellow-900 text-sm md:text-base"><strong>Cake:</strong> ₹500/- (Extra Cost)</p>
+                    <p className="text-rose-800 text-sm md:text-base"><strong>Cake:</strong> ₹500/- (Extra Cost)</p>
                     <p className="text-gray-700 text-sm md:text-base mt-1"><strong>Champagne:</strong> ₹500/- (Non-Alcoholic Fruit Flavour)</p>
                   </>
                 )}
@@ -348,7 +348,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
                 Rescheduling must be informed at least one day prior. Event can be rescheduled within one month, subject to availability.
               </p>
-              <p className="text-yellow-800 font-semibold text-sm md:text-base">
+              <p className="text-rose-700 font-semibold text-sm md:text-base">
                 * No Refund Policy Applicable
               </p>
             </div>
@@ -376,13 +376,13 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
                     />
                   </div>
                   <CardContent className="p-2 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-yellow-800 transition-colors line-clamp-2">
+                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-rose-700 transition-colors line-clamp-2">
                       {relPkg.name}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-2 mb-1 md:mb-2 hidden md:block">
                       {relPkg.shortDescription}
                     </p>
-                    <p className="text-base md:text-xl font-bold text-yellow-800">
+                    <p className="text-base md:text-xl font-bold text-rose-700">
                       {formatPrice(relPkg.price)}
                     </p>
                   </CardContent>

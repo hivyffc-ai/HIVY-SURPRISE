@@ -10,44 +10,44 @@ const reviews = [
   {
     name: "Yoma Patel",
     initial: "Y",
-    color: "bg-yellow-600",
+    color: "bg-rose-600",
     date: "1 month ago",
-    review: "Cutest set up and amazing food service."
+    review: "Cutest surprise date setup and amazing food service!"
   },
   {
     name: "Krishn Sharma",
     initial: "K",
     color: "bg-stone-600",
     date: "2 months ago",
-    review: "Best candlelight dinner experience in Surat! The decoration was stunning and staff was very helpful. Proposed here and she said YES! 💍"
+    review: "Best surprise date experience in Surat! Planned a secret proposal here and she said YES! The staff helped coordinate everything perfectly! 💍"
   },
   {
     name: "Priya Shah",
     initial: "P",
     color: "bg-pink-500",
     date: "2 months ago",
-    review: "My husband surprised me here for our anniversary. The rooftop setup was magical! Highly recommend for couples! ❤️"
+    review: "My husband surprised me here for our anniversary. I had NO idea! The private setup was magical when I walked in! Highly recommend! ❤️"
   },
   {
     name: "Rahul Desai",
     initial: "R",
     color: "bg-red-500",
     date: "3 months ago",
-    review: "Best place for couples in Surat! Booked for my wife's birthday and the team made it so special. Glass house setup was Instagram-perfect!"
+    review: "Best place for surprise dates in Surat! Planned my wife's birthday surprise and her reaction was priceless. The team kept everything secret perfectly!"
   },
   {
     name: "Devanshi",
     initial: "D",
     color: "bg-cyan-500",
     date: "3 weeks ago",
-    review: "Such a great time!!!! Thanks to my hubby and the team of friends factory cafe!!!"
+    review: "Such a great surprise date experience!!!! My boyfriend planned everything secretly and I was speechless when I walked in!"
   },
   {
     name: "Vraj Patel",
     initial: "V",
     color: "bg-green-500",
     date: "1 month ago",
-    review: "The place was calm and peace, food was awesome, will be back soon 🍽️"
+    review: "The perfect surprise date venue! So peaceful and romantic, food was awesome. Already planning our next surprise here! 🍽️"
   },
 ];
 
@@ -84,7 +84,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-8">
-            <Badge className="mb-3 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-3 bg-stone-200 text-rose-800 border-stone-300">
               <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" /> Google Reviews
             </Badge>
             <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">
@@ -165,7 +165,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
             href="https://www.google.com/maps/place/HIVY+-+Place+For+Celebration/@21.1895149,72.7828283,17z/data=!4m8!3m7!1s0x3be04d4fc7b5dbb9:0xb1aa92785a2443b8!8m2!3d21.1895149!4d72.7854032!9m1!1b1!16s%2Fg%2F11y3glr3jq"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-yellow-700 hover:text-yellow-800 font-medium text-sm"
+            className="inline-flex items-center gap-2 text-pink-600 hover:text-rose-700 font-medium text-sm"
           >
             <GoogleIcon />
             Review Us on Google →

@@ -30,42 +30,60 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": uniqueContent.faqContent.map((faq: { question: string; answer: string }) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
       <div className="bg-stone-100 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm flex-wrap">
-            <Link href="/" className="text-gray-500 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-rose-700">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/services" className="text-gray-500 hover:text-yellow-800">Services</Link>
+            <Link href="/services" className="text-gray-500 hover:text-rose-700">Services</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href={`/services/${service.slug}`} className="text-gray-500 hover:text-yellow-800">{service.name}</Link>
+            <Link href={`/services/${service.slug}`} className="text-gray-500 hover:text-rose-700">{service.name}</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-yellow-800 font-medium">{keyword.title}</span>
+            <span className="text-rose-700 font-medium">{keyword.title}</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-rose-700 via-pink-600 to-rose-800 text-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                {service.emoji} HIVY - Place for Celebrations
+                {service.emoji} HIVY - Surprise Date Planners
               </Badge>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-serif">
                 {keyword.h1}
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
-                Create magical {keyword.title.toLowerCase()} moments at HIVY - Place for Celebrations. Premium romantic celebration venue with stunning setups and unforgettable experiences.
+                Plan magical {keyword.title.toLowerCase()} surprise moments at HIVY - Surprise Date Planners. We secretly set up everything—just bring your partner for the ultimate surprise reveal!
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <FFCBookNowButton 
                   pageTitle={keyword.title} 
-                  className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6" 
+                  className="bg-white text-rose-700 hover:bg-rose-50 text-lg px-8 py-6" 
                 />
                 <a href={`tel:${siteConfig.phone}`}>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
@@ -88,13 +106,18 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="text-[7rem]">{service.emoji}</span>
-              </div>
+            {/* Hero Booking Form - Desktop */}
+            <div className="hidden lg:block">
+              <FFCBookingForm variant="hero" pageTitle={keyword.title} />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mobile Booking Form - Below Hero */}
+      <section className="lg:hidden bg-rose-50 py-8">
+        <div className="container mx-auto px-4">
+          <FFCBookingForm pageTitle={keyword.title} />
         </div>
       </section>
 
@@ -106,7 +129,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
             <div className="lg:col-span-2">
               <article className="prose prose-lg max-w-none">
                 <h2 className="text-2xl font-bold mb-6 font-serif">
-                  {keyword.title} at HIVY - Place for Celebrations
+                  {keyword.title} at HIVY - Surprise Date Planners
                 </h2>
                 
                 {/* Introduction - from generated content */}
@@ -116,22 +139,22 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
                 <div className="bg-stone-100 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Gift className="h-5 w-5 text-yellow-800" />
-                    What's Included
+                    <Gift className="h-5 w-5 text-rose-700" />
+                    What's Included in Your Surprise Date
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
                     {[
-                      "3 Mesmerizing Hours of Private Celebration",
-                      "Welcome Drink & Celebration Cake",
-                      "Romantic Decorations & Setup",
-                      "Candle-Lit Ambiance",
+                      "3 Hours of Private Surprise Date",
+                      "Secret Setup Before You Arrive",
+                      "Romantic Decorations & Rose Petals",
+                      "Welcome Champagne Toast",
                       "Soft Romantic Music",
-                      "Photo-Ready Backdrop",
-                      "Delicious Café-Style Food",
-                      "Panoramic City Views"
+                      "Photo-Ready Surprise Setup",
+                      "Gourmet Surprise Dinner",
+                      "Celebration Cake Included"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-yellow-800 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-rose-700 flex-shrink-0" />
                         <span className="text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -149,13 +172,13 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 ))}
 
                 <h3 className="text-xl font-bold mb-4">
-                  Why Choose HIVY - Place for Celebrations?
+                  Why Choose HIVY - Surprise Date Planners?
                 </h3>
                 
                 <ul className="space-y-3 mb-8">
                   {uniqueContent.whyChooseUs.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-yellow-800 font-bold">•</span>
+                      <span className="text-rose-700 font-bold">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -163,7 +186,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
 
                 <div className="bg-gray-50 rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-yellow-800" />
+                    <Clock className="h-5 w-5 text-rose-700" />
                     Available Time Slots
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -209,13 +232,13 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                           <span className="text-5xl">{pkg.emoji}</span>
                         </div>
                         <CardContent className="p-4">
-                          <h3 className="font-semibold mb-1 group-hover:text-yellow-800 transition-colors">
+                          <h3 className="font-semibold mb-1 group-hover:text-rose-700 transition-colors">
                             {pkg.name}
                           </h3>
                           <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                             {pkg.shortDescription}
                           </p>
-                          <p className="text-lg font-bold text-yellow-800">
+                          <p className="text-lg font-bold text-rose-700">
                             {formatPrice(pkg.price)}
                           </p>
                         </CardContent>
@@ -226,7 +249,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 
                 <div className="text-center mt-6">
                   <Link href="/packages">
-                    <Button variant="outline" className="border-yellow-800 text-yellow-800 hover:bg-stone-100">
+                    <Button variant="outline" className="border-rose-700 text-rose-700 hover:bg-stone-100">
                       View All Packages <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
@@ -280,11 +303,11 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 key={kw.slug}
                 href={`/services/${service.slug}/${kw.slug}`}
               >
-                <Card className="border-stone-200 hover:border-yellow-200 hover:shadow-md transition-all group">
+                <Card className="border-stone-200 hover:border-rose-200 hover:shadow-md transition-all group">
                   <CardContent className="p-4">
-                    <h3 className="font-medium group-hover:text-yellow-800 transition-colors flex items-center justify-between">
+                    <h3 className="font-medium group-hover:text-rose-700 transition-colors flex items-center justify-between">
                       {kw.title}
-                      <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-yellow-800" />
+                      <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-rose-700" />
                     </h3>
                   </CardContent>
                 </Card>
@@ -298,7 +321,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-stone-200 text-rose-800 border-stone-300">
               <MapPin className="h-4 w-4 mr-2" /> Service Areas
             </Badge>
             <h2 className="text-2xl font-bold mb-4 font-serif">
@@ -311,7 +334,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
-                className="px-4 py-2 bg-stone-100 rounded-full text-gray-700 hover:bg-yellow-800 hover:text-white transition-colors border border-stone-300 text-sm"
+                className="px-4 py-2 bg-stone-100 rounded-full text-gray-700 hover:bg-rose-700 hover:text-white transition-colors border border-stone-300 text-sm"
               >
                 {area.name}
               </Link>
@@ -345,7 +368,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-yellow-800 to-yellow-700 text-white">
+      <section className="py-16 bg-gradient-to-br from-rose-700 to-pink-600 text-white">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 font-serif">
             Ready for Your {keyword.title}?
@@ -356,7 +379,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FFCBookNowButton 
               pageTitle={keyword.title} 
-              className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6" 
+              className="bg-white text-rose-700 hover:bg-stone-100 text-lg px-8 py-6" 
             />
             <a href={`tel:${siteConfig.phone}`}>
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">

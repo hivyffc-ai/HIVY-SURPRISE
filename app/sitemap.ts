@@ -1,6 +1,6 @@
 /**
  * HIVY SURPRISE DATE - 100% SURPRISE DATE FOCUSED SITEMAP
- * Domain: hivy.co.in
+ * Domain: surprisedatesurat.com
  * 
  * Total Pages: Optimized surprise date sitemap including:
  * - 1 Homepage (priority 1.0)
@@ -23,7 +23,7 @@ import {
 } from "@/lib/ffc-config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://hivy.co.in";
+  const baseUrl = "https://surprisedatesurat.com";
   const currentDate = new Date().toISOString();
   
   const entries: MetadataRoute.Sitemap = [];
