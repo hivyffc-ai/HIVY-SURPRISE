@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surprisedatesurat.com/sitemap-index.xml
