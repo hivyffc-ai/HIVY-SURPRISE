@@ -52,16 +52,16 @@ export const siteConfig = {
   email: "hello@hivy.co.in",
   address: "252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road, Adajan, Pal Gam, Surat, Gujarat 394510",
   city: "Surat",
-  website: "https://hivy.co.in",
+  website: "https://surprisedatesurat.com",
   colors: {
-    primary: "#BE185D", // Deep Romantic Rose
+    primary: "#6D28D9", // Playful Plum Violet
     secondary: "#D4A574", // Champagne Gold
     accent: "#E879A9",   // Rose Gold
-    gradient: "from-rose-700 to-pink-600",
-    gradientHover: "from-rose-800 to-pink-700",
-    lightBg: "bg-rose-50",
-    darkBg: "bg-rose-900",
-    text: "text-rose-800"
+    gradient: "from-violet-700 to-pink-600",
+    gradientHover: "from-violet-800 to-pink-700",
+    lightBg: "bg-violet-50",
+    darkBg: "bg-violet-900",
+    text: "text-violet-800"
   },
   socialLinks: {
     instagram: "https://www.instagram.com/hivy_placeforcelebration/?hl=en",

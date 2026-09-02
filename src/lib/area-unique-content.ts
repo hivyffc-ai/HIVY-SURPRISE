@@ -311,7 +311,7 @@ function generateTestimonialsSection(domain: DomainConfig, areaName: string): Ar
   
   const testimonialsHTML = testimonials.map(t => `
     <div class="bg-card border rounded-xl p-6">
-      <div class="flex items-center gap-1 mb-3 text-rose-500">
+      <div class="flex items-center gap-1 mb-3 text-violet-500">
         ${'★'.repeat(t.rating)}
       </div>
       <p class="text-muted-foreground mb-4">"${t.text}"</p>

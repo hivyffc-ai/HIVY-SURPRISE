@@ -105,8 +105,8 @@ export const domains: DomainConfig[] = [
       primary: "#EC4899", // Pink
       secondary: "#F472B6",
       accent: "#DB2777",
-      gradient: "from-pink-500 to-rose-600",
-      gradientHover: "from-pink-600 to-rose-700",
+      gradient: "from-pink-500 to-violet-600",
+      gradientHover: "from-pink-600 to-violet-700",
       lightBg: "bg-pink-50",
       darkBg: "bg-pink-900",
       text: "text-pink-600"
@@ -205,8 +205,8 @@ export const domains: DomainConfig[] = [
       primary: "#EF4444", // Red/Rose
       secondary: "#F87171",
       accent: "#DC2626",
-      gradient: "from-red-500 to-rose-600",
-      gradientHover: "from-red-600 to-rose-700",
+      gradient: "from-red-500 to-violet-600",
+      gradientHover: "from-red-600 to-violet-700",
       lightBg: "bg-red-50",
       darkBg: "bg-red-900",
       text: "text-red-600"
@@ -305,8 +305,8 @@ export const domains: DomainConfig[] = [
       primary: "#8B5CF6", // Royal Purple
       secondary: "#A78BFA",
       accent: "#7C3AED",
-      gradient: "from-stone-1000 to-rose-600",
-      gradientHover: "from-amber-600 to-rose-600",
+      gradient: "from-stone-1000 to-violet-600",
+      gradientHover: "from-amber-600 to-violet-600",
       lightBg: "bg-stone-100",
       darkBg: "bg-stone-900",
       text: "text-amber-600"
@@ -355,11 +355,11 @@ export const domains: DomainConfig[] = [
       primary: "#7C3AED", // Deep Purple/Violet
       secondary: "#8B5CF6",
       accent: "#6D28D9",
-      gradient: "from-rose-500 to-amber-600",
-      gradientHover: "from-rose-600 to-pink-600",
-      lightBg: "bg-rose-50",
-      darkBg: "bg-rose-800",
-      text: "text-rose-600"
+      gradient: "from-violet-500 to-amber-600",
+      gradientHover: "from-violet-600 to-pink-600",
+      lightBg: "bg-violet-50",
+      darkBg: "bg-violet-800",
+      text: "text-violet-600"
     },
     heroImages: ["/images/hero/date1.jpg", "/images/hero/date2.jpg", "/images/hero/date3.jpg"],
     keywords: [
